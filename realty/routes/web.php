@@ -17,8 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin')->get('/', 'AdminController@handle');
+//Route::prefix('admin')->get('/', 'AdminController@handle');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/estate-object/create', 'EstateObjectController@store')->name('estate-object_create');

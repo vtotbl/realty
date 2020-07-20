@@ -12,7 +12,7 @@ use Illuminate\Support\Carbon;
  * @package App\Models
  *
  * @property int $id
- * @property int $user_id
+ * @property int $estate_object_id
  * @property string $path
  * @property Carbon $uploaded_at
  */
@@ -24,12 +24,17 @@ class Photo extends Model
     const CREATED_AT = 'uploaded_at';
 
     /**
+     * updated_at не используем
+     */
+    const UPDATED_AT = null;
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'user_id',
+        'estate_object_id',
         'path',
         'uploaded_at',
     ];

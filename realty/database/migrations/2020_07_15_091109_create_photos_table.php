@@ -15,7 +15,7 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->bigInteger('estate_object_id');
             $table->string('path')->unique();
             $table->timestamp('uploaded_at');
         });
